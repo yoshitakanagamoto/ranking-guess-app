@@ -1,21 +1,89 @@
+/* 全体のスタイル */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    margin: 20px;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
 }
 
+/* タイトル */
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+/* 入力欄とボタン */
+input, button {
+    padding: 12px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input {
+    width: 80%;
+    max-width: 300px;
+}
+
+button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+/* ランキング表 */
 table {
+    width: 90%;
+    max-width: 400px;
     margin: 20px auto;
     border-collapse: collapse;
-    width: 50%;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th, td {
-    border: 1px solid black;
-    padding: 10px;
+    border: 1px solid #ddd;
+    padding: 12px;
     text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .rank {
     font-weight: bold;
+    transition: color 0.3s;
 }
+
+/* 10位以内の赤表示 */
+.rank.red {
+    color: red;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    input, button {
+        width: 100%;
+        max-width: none;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+

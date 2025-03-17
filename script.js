@@ -12,12 +12,13 @@ function checkRanking() {
 
   if (found) {
     if (found.rank <= 10) {
-      document.querySelectorAll(".rank")[found.rank - 1].textContent = found.name;
-      document.querySelectorAll(".rank")[found.rank - 1].style.color = "red";
+      const rankCells = document.querySelectorAll(".rank");
+      rankCells[found.rank - 1].textContent = found.name;
+      rankCells[found.rank - 1].classList.add("red");
       result.textContent = `「${input}」は ${found.rank} 位！（ランキング表に追加）`;
     } else {
       result.textContent = `「${input}」は ${found.rank} 位（ランキング表外）`;
-      result.style.color = "blue";
+      result.style.color = "black";
     }
   } else {
     result.textContent = `「${input}」はランク外`;
@@ -26,3 +27,4 @@ function checkRanking() {
 
   document.getElementById("menuInput").value = "";
 }
+
