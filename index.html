@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帰れま10 予想アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>帰れま10 予想アプリ</h1>
+    <p>メニューを選んで、ランキングを当てよう！</p>
+
+    <input type="text" id="menuInput" placeholder="メニュー名を入力">
+    <button onclick="checkRanking()">決定</button>
+
+    <h2>ランキング表</h2>
+    <table id="rankingTable">
+        <tr><th>順位</th><th>メニュー</th></tr>
+        <tr><td>1位</td><td class="rank"></td></tr>
+        <tr><td>2位</td><td class="rank"></td></tr>
+        <tr><td>3位</td><td class="rank"></td></tr>
+        <tr><td>4位</td><td class="rank"></td></tr>
+        <tr><td>5位</td><td class="rank"></td></tr>
+        <tr><td>6位</td><td class="rank"></td></tr>
+        <tr><td>7位</td><td class="rank"></td></tr>
+        <tr><td>8位</td><td class="rank"></td></tr>
+        <tr><td>9位</td><td class="rank"></td></tr>
+        <tr><td>10位</td><td class="rank"></td></tr>
+    </table>
+
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
